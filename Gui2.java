@@ -343,7 +343,12 @@ public class Gui2 {
 		btnNewButton.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		btnNewButton.setBounds(10, 25, 100, 56);
 		panel_2.add(btnNewButton);
-		
+		JButton btnNewButton_1 = new JButton("Close");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		JButton btnNewButton_1 = new JButton("Close");
 		btnNewButton_1.setBackground(new Color(245, 245, 220));
 		btnNewButton_1.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
