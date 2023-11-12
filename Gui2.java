@@ -349,7 +349,7 @@ public class Gui2 {
 				System.exit(0);
 			}
 		});
-		JButton btnNewButton_1 = new JButton("Close");
+		
 		btnNewButton_1.setBackground(new Color(245, 245, 220));
 		btnNewButton_1.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		btnNewButton_1.setBounds(682, 25, 89, 56);
