@@ -140,7 +140,7 @@ public class Cat2form {
 				 try {
 	                    
 	                    Class.forName("com.mysql.cj.jdbc.Driver");
-	    				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Cat2form","root","");
+	    				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Cat2form","root","mapenzi");
 	    				String sql="select * from login where name=? AND Username=? AND Password=? AND Email=? AND Phone=? AND Address=?";
 	    				PreparedStatement pst=con.prepareStatement(sql);
 	    				pst.setString(1,Name);
