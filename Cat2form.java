@@ -125,6 +125,44 @@ public class Cat2form {
 		dress.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Submit");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String Name=name.getText();
+				String Username=Usname.getText();
+				String Password=pWord.getText();
+				String Email=mail.getText();
+				String Phone=pNo.getText();
+				String Address=dress.getText();
+				String ConfirmPassword=cPassword.getText();
+				
+				
+				
+				 try {
+	                    
+	                    Class.forName("com.mysql.cj.jdbc.Driver");
+	    				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Cat2form","root","");
+	    				String sql="select * from login where name=? AND Username=? AND Password=? AND Email=? AND Phone=? AND Address=?";
+	    				PreparedStatement pst=con.prepareStatement(sql);
+	    				pst.setString(1,Name);
+	    				pst.setString(2,Username);
+	    				pst.setString(3,Password);
+	    				pst.setString(4,Email);
+	    				pst.setString(5,Phone);
+	    				pst.setString(6,Address);
+	    				
+	    				ResultSet rs=pst.executeQuery();
+	                 
+	                    
+
+	                  
+
+	                } catch(Exception e1){
+						System.out.println(e1);
+						}
+			}
+		});
+		btnNewButton.setBounds(100, 301, 89, 23);
+		frame.getContentPane().add(btnNewButton)
 		btnNewButton.setBounds(91, 301, 89, 23);
 		frame.getContentPane().add(btnNewButton);
 		
